@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Invoera</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0b0f14;
+      --surface: #0f1520;
+      --card:    #131d2b;
+      --border:  #1e2a38;
+      --blue:    #4361ee;
+      --green:   #10b981;
+      --amber:   #f59e0b;
+      --text:    #f1f5f9;
+      --sub:     #94a3b8;
+      --muted:   #64748b;
+      --radius:  14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:  var(--bg);
+      color:       var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    header {
+      background:    var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding:       40px 24px 32px;
+      text-align:    center;
+    }
+
+    .logo {
+      font-size:      34px;
+      font-weight:    600;
+      color:          var(--blue);
+      letter-spacing: -1px;
+      margin-bottom:  6px;
+    }
+
+    .header-tag {
+      display:         inline-block;
+      font-size:       12px;
+      font-weight:     500;
+      color:           var(--muted);
+      background:      var(--card);
+      border:          1px solid var(--border);
+      border-radius:   999px;
+      padding:         4px 14px;
+      margin-top:      4px;
+      letter-spacing:  0.4px;
+    }
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .container {
+      max-width: 700px;
+      margin:    0 auto;
+      padding:   48px 24px 80px;
+    }
+
+    /* ── Meta strip ───────────────────────────────────────── */
+    .meta {
+      display:       flex;
+      flex-wrap:     wrap;
+      gap:           8px 16px;
+      align-items:   center;
+      background:    var(--card);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       14px 20px;
+      margin-bottom: 36px;
+      font-size:     13px;
+      color:         var(--muted);
+    }
+
+    .meta strong { color: var(--text); font-weight: 500; }
+
+    .live-badge {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             6px;
+      background:      rgba(16,185,129,0.1);
+      border:          1px solid rgba(16,185,129,0.25);
+      color:           var(--green);
+      font-size:       12px;
+      font-weight:     500;
+      padding:         3px 10px;
+      border-radius:   999px;
+    }
+
+    .live-dot {
+      width:           6px;
+      height:          6px;
+      border-radius:   50%;
+      background:      var(--green);
+      animation:       pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+
+    .sep {
+      width:           4px;
+      height:          4px;
+      border-radius:   50%;
+      background:      var(--border);
+      flex-shrink:     0;
+    }
+
+    /* ── Intro card ───────────────────────────────────────── */
+    .intro {
+      background:    var(--card);
+      border:        1px solid var(--border);
+      border-left:   3px solid var(--blue);
+      border-radius: var(--radius);
+      padding:       22px 24px;
+      font-size:     14px;
+      color:         var(--sub);
+      line-height:   1.9;
+      margin-bottom: 44px;
+    }
+
+    .intro strong { color: var(--text); font-weight: 500; }
+
+    /* ── Table of contents ────────────────────────────────── */
+    .toc {
+      background:    var(--card);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       20px 24px;
+      margin-bottom: 44px;
+    }
+
+    .toc-title {
+      font-size:      11px;
+      font-weight:    500;
+      color:          var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom:  14px;
+    }
+
+    .toc-list {
+      display:        flex;
+      flex-direction: column;
+      gap:            8px;
+      list-style:     none;
+    }
+
+    .toc-list a {
+      display:         flex;
+      align-items:     center;
+      gap:             10px;
+      font-size:       14px;
+      color:           var(--sub);
+      text-decoration: none;
+      transition:      color 0.15s;
+    }
+
+    .toc-list a:hover { color: var(--blue); }
+
+    .toc-num {
+      display:         inline-flex;
+      align-items:     center;
+      justify-content: center;
+      width:           20px;
+      height:          20px;
+      background:      rgba(67,97,238,0.1);
+      color:           var(--blue);
+      border-radius:   5px;
+      font-size:       10px;
+      font-weight:     600;
+      flex-shrink:     0;
+    }
+
+    /* ── Sections ─────────────────────────────────────────── */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      display:        flex;
+      align-items:    center;
+      gap:            10px;
+      font-size:      11px;
+      font-weight:    500;
+      color:          var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom:  20px;
+      padding-bottom: 14px;
+      border-bottom:  1px solid var(--border);
+    }
+
+    .num {
+      display:         inline-flex;
+      align-items:     center;
+      justify-content: center;
+      width:           24px;
+      height:          24px;
+      background:      rgba(67,97,238,0.12);
+      color:           var(--blue);
+      border-radius:   6px;
+      font-size:       11px;
+      font-weight:     600;
+      letter-spacing:  0;
+      flex-shrink:     0;
+    }
+
+    p {
+      font-size:     15px;
+      color:         var(--sub);
+      margin-bottom: 14px;
+      line-height:   1.85;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    ul {
+      list-style:     none;
+      margin-bottom:  14px;
+      display:        flex;
+      flex-direction: column;
+      gap:            10px;
+    }
+
+    ul li {
+      display:     flex;
+      align-items: flex-start;
+      gap:         10px;
+      font-size:   15px;
+      color:       var(--sub);
+      line-height: 1.8;
+    }
+
+    ul li::before {
+      content:       '';
+      display:       block;
+      width:         5px;
+      height:        5px;
+      border-radius: 50%;
+      background:    var(--blue);
+      margin-top:    10px;
+      flex-shrink:   0;
+    }
+
+    /* ── Info cards ───────────────────────────────────────── */
+    .cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+
+    .card {
+      background:    var(--card);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       16px 20px;
+    }
+
+    .card-title {
+      font-size:     13px;
+      font-weight:   500;
+      color:         var(--text);
+      margin-bottom: 4px;
+    }
+
+    .card p {
+      font-size:     13px;
+      margin-bottom: 0;
+      color:         var(--muted);
+    }
+
+    /* ── Highlight box ────────────────────────────────────── */
+    .highlight {
+      display:       flex;
+      align-items:   flex-start;
+      gap:           12px;
+      background:    rgba(67,97,238,0.06);
+      border:        1px solid rgba(67,97,238,0.2);
+      border-radius: var(--radius);
+      padding:       16px 20px;
+      margin-top:    14px;
+    }
+
+    .highlight-icon {
+      font-size:  20px;
+      flex-shrink: 0;
+      margin-top:  1px;
+    }
+
+    .highlight p {
+      font-size:     14px;
+      margin-bottom: 0;
+      color:         var(--sub);
+    }
+
+    /* ── Contact ──────────────────────────────────────────── */
+    .contact-box {
+      background:    rgba(67,97,238,0.06);
+      border:        1px solid rgba(67,97,238,0.2);
+      border-radius: var(--radius);
+      padding:       32px 24px;
+      text-align:    center;
+    }
+
+    .contact-label {
+      font-size:      11px;
+      font-weight:    500;
+      color:          var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom:  14px;
+    }
+
+    .contact-email {
+      display:         block;
+      color:           var(--blue);
+      text-decoration: none;
+      font-size:       18px;
+      font-weight:     500;
+      margin-bottom:   12px;
+    }
+
+    .contact-email:hover { text-decoration: underline; }
+
+    .contact-meta {
+      font-size: 13px;
+      color:     var(--muted);
+    }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    footer {
+      text-align:  center;
+      padding:     28px 24px;
+      border-top:  1px solid var(--border);
+      font-size:   13px;
+      color:       var(--muted);
+      line-height: 2;
+    }
+
+    footer strong { color: var(--blue); }
+
+    /* ── Responsive ───────────────────────────────────────── */
+    @media (max-width: 600px) {
+      header       { padding: 28px 16px 24px; }
+      .container   { padding: 32px 16px 60px; }
+      .meta        { flex-direction: column; align-items: flex-start; }
+      .sep         { display: none; }
+      .logo        { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">invoera</div>
+    <div class="header-tag">Privacy Policy</div>
+  </header>
+
+  <div class="container">
+
+    <!-- Meta -->
+    <div class="meta">
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        Active
+      </div>
+      <div class="sep"></div>
+      <span>Effective: <strong>January 1, 2025</strong></span>
+      <div class="sep"></div>
+      <span>Updated: <strong>March 2025</strong></span>
+      <div class="sep"></div>
+      <span>Jurisdiction: <strong>Nigeria</strong></span>
+    </div>
+
+    <!-- Intro -->
+    <div class="intro">
+      Welcome to <strong>Invoera</strong> — an invoicing and business management app built for freelancers and small businesses across Africa. This Privacy Policy explains how <strong>Iced Pixels Studio</strong> ("we", "us", or "our") collects, uses, stores, and protects your personal information when you use the Invoera mobile application. By using Invoera, you agree to the practices described in this policy.
+    </div>
+
+    <!-- Table of contents -->
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span class="toc-num">1</span> Information We Collect</a></li>
+        <li><a href="#s2"><span class="toc-num">2</span> How We Use Your Information</a></li>
+        <li><a href="#s3"><span class="toc-num">3</span> Data Storage &amp; Security</a></li>
+        <li><a href="#s4"><span class="toc-num">4</span> Sharing of Information</a></li>
+        <li><a href="#s5"><span class="toc-num">5</span> Your Rights</a></li>
+        <li><a href="#s6"><span class="toc-num">6</span> Data Retention</a></li>
+        <li><a href="#s7"><span class="toc-num">7</span> Children's Privacy</a></li>
+        <li><a href="#s8"><span class="toc-num">8</span> Push Notifications</a></li>
+        <li><a href="#s9"><span class="toc-num">9</span> Third-Party Services</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span> Changes to This Policy</a></li>
+        <li><a href="#s11"><span class="toc-num">11</span> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- 1 -->
+    <section id="s1">
+      <h2><span class="num">1</span> Information We Collect</h2>
+      <p>We collect the following types of information to provide and improve the Invoera service:</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Account Information</div>
+          <p>Your name, email address, and password when you create an Invoera account.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Business Information</div>
+          <p>Business name, address, phone number, website, logo, bank account details, and other information you enter in your business profile.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Invoice &amp; Transaction Data</div>
+          <p>Invoices you create, customer names and contact details, payment amounts, item descriptions, VAT, discounts, and invoice history.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Device Information</div>
+          <p>Device type, operating system, app version, and push notification tokens to deliver in-app alerts.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Usage Data</div>
+          <p>How you interact with the app — features used, screens visited, and actions taken — to help us improve your experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section id="s2">
+      <h2><span class="num">2</span> How We Use Your Information</h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li>To create and manage your Invoera account</li>
+        <li>To generate, store, and share invoices on your behalf</li>
+        <li>To send payment reminders and push notifications you have enabled</li>
+        <li>To process Pro plan subscriptions via Google Play</li>
+        <li>To provide customer support and respond to your requests</li>
+        <li>To improve app features, fix bugs, and enhance performance</li>
+        <li>To comply with applicable laws and regulations in Nigeria</li>
+      </ul>
+      <div class="highlight">
+        <div class="highlight-icon">🔒</div>
+        <p>We do <strong>not</strong> sell your personal information to third parties. We do <strong>not</strong> display advertisements inside the Invoera app.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section id="s3">
+      <h2><span class="num">3</span> Data Storage &amp; Security</h2>
+      <p>Your data is stored securely using <strong>Supabase</strong>, a cloud database platform with enterprise-grade security. All data is encrypted in transit using HTTPS/TLS and encrypted at rest.</p>
+      <ul>
+        <li>Your password is never stored in plain text — it is securely hashed</li>
+        <li>Bank account details are stored in your private, access-controlled database record</li>
+        <li>Row-level security policies ensure you can only ever access your own data</li>
+        <li>We follow industry-standard security practices to protect against unauthorised access</li>
+      </ul>
+      <p>While we take all reasonable precautions, no method of electronic storage is 100% secure. We encourage you to use a strong password and enable biometric lock for added protection.</p>
+    </section>
+
+    <!-- 4 -->
+    <section id="s4">
+      <h2><span class="num">4</span> Sharing of Information</h2>
+      <p>We only share your information in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> Supabase (database), Expo (app platform), and Google Play (billing) — each bound by their own privacy policies</li>
+        <li><strong>Legal Requirements:</strong> If required by Nigerian law, a court order, or a regulatory authority</li>
+        <li><strong>Business Transfer:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred to the new owner</li>
+        <li><strong>Your Consent:</strong> For any other purpose with your explicit permission</li>
+      </ul>
+      <p>We do <strong>not</strong> share your invoice data, customer information, or business details with any third party for marketing or advertising purposes.</p>
+    </section>
+
+    <!-- 5 -->
+    <section id="s5">
+      <h2><span class="num">5</span> Your Rights</h2>
+      <p>You have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+        <li><strong>Correction:</strong> Update or correct your information at any time in the app settings</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and all associated data</li>
+        <li><strong>Export:</strong> Export your invoice data as a CSV file directly from the app</li>
+        <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+        <li><strong>Objection:</strong> Object to processing of your data in certain circumstances</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at the email address below. We will respond within 30 days.</p>
+    </section>
+
+    <!-- 6 -->
+    <section id="s6">
+      <h2><span class="num">6</span> Data Retention</h2>
+      <p>We retain your personal data for as long as your Invoera account is active. If you delete your account, we will permanently remove your data within <strong>30 days</strong>, except where we are required to retain certain records for legal or regulatory compliance.</p>
+      <p>Anonymised, aggregated usage statistics may be retained indefinitely for product improvement purposes.</p>
+    </section>
+
+    <!-- 7 -->
+    <section id="s7">
+      <h2><span class="num">7</span> Children's Privacy</h2>
+      <p>Invoera is designed for business use by adults aged <strong>18 and over</strong>. We do not knowingly collect personal information from anyone under 18. If you believe a child has provided us with personal information, please contact us immediately and we will delete it promptly.</p>
+    </section>
+
+    <!-- 8 -->
+    <section id="s8">
+      <h2><span class="num">8</span> Push Notifications</h2>
+      <p>Invoera may send push notifications for invoice reminders, payment alerts, and important account updates. You can enable or disable notifications at any time through your device settings or within the app.</p>
+      <p>We do <strong>not</strong> use push notifications for marketing or promotional messages.</p>
+    </section>
+
+    <!-- 9 -->
+    <section id="s9">
+      <h2><span class="num">9</span> Third-Party Services</h2>
+      <p>Invoera integrates with the following services. Please review their privacy policies for details on how they handle your data:</p>
+      <ul>
+        <li><strong>Supabase</strong> — database and authentication · supabase.com/privacy</li>
+        <li><strong>Google Play</strong> — app distribution and billing · policies.google.com/privacy</li>
+        <li><strong>Expo</strong> — app platform and push notifications · expo.dev/privacy</li>
+        <li><strong>WhatsApp</strong> — only used when you explicitly share an invoice via WhatsApp</li>
+      </ul>
+    </section>
+
+    <!-- 10 -->
+    <section id="s10">
+      <h2><span class="num">10</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make significant changes, we will notify you through the app or via email. Your continued use of Invoera after changes are posted constitutes your acceptance of the updated policy.</p>
+      <p>We encourage you to review this page periodically to stay informed about how we protect your information.</p>
+    </section>
+
+    <!-- 11 -->
+    <section id="s11">
+      <h2><span class="num">11</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please reach out to us directly:</p>
+      <div class="contact-box">
+        <div class="contact-label">Iced Pixels Studio — makers of Invoera</div>
+        <a class="contact-email" href="mailto:invoera@sidneyanieze.com">invoera@sidneyanieze.com</a>
+        <div class="contact-meta">sidneyanieze.com &nbsp;·&nbsp; Lagos, Nigeria</div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 <strong>Invoera</strong> by Iced Pixels Studio. All rights reserved.<br/>
+    invoera@sidneyanieze.com &nbsp;·&nbsp; sidneyanieze.com
+  </footer>
+
+</body>
+</html>
+```
